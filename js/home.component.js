@@ -11,7 +11,7 @@ angular
 
             this.shows = rest.get({
                 type: 'tv',
-                query: this.query
+                query: 'the ellen show'
             })
         }]
     })

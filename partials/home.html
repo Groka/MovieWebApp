@@ -18,10 +18,11 @@
 <div class="form-group" style="margin-bottom: 5vh">
     <input type="text" class="form-control" id="search" ng-model="$ctrl.query">
 </div>
-<div class="container-fluid">
-    <div class="col-md-4 col-md-offset-1 image" ng-repeat="photo in $ctrl.shows.results">
+<div class="text-center">
+    <div class="col-md-6 image" ng-repeat="photo in $ctrl.shows.results">
         <a href="#{{i}}">
-            <img class="img-responsive img-thumbnail" ng-src="{{'https://image.tmdb.org/t/p/w300' + photo.backdrop_path}}"/>
+            <!--<img class="img-responsive img-thumbnail" ng-src="{{'https://image.tmdb.org/t/p/w300' + photo.backdrop_path}}"/>-->
+            <img class="img-thumbnail" ng-src="img/fox.jpg"/>
             <p class="col-md-8"> {{photo.name}} </p>
         </a>           
     </div>
