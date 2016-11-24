@@ -1,0 +1,21 @@
+
+.main-container{
+    text-align: center;
+    margin: 15vh 30vh 0vh 30vh;
+}
+
+.image p {
+    text-align: center;
+    font-size: 30px;
+    font-size: 1.5vw;
+}
+
+.col-centered {
+  display: inline-block;
+  /* reset the text-align */
+}
+
+.image {
+    width: 65vh;
+    margin-bottom: 2vh;
+}

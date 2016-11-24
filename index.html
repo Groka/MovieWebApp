@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="movieApp">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> {{title}} </title>
+        <!-- Stylesheet stuff -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+        <link href="css/app.css" rel="stylesheet"/>
+
+        <!-- Javascripts -->
+        <!--<script src="https://code.jquery.com/jquery-3.1.1.min.js" rel="stylesheet" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>-->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js" rel="stylesheet"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.js" rel="stylesheet"></script>
+        <script src="https://unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+        <script src="app.module.js"></script>
+        <script src="app.config.js"></script>
+        <script src="js/home.module.js"></script>
+        <script src="js/home.component.js"></script>
+
+        <!-- Bootstrap switch -->
+        <link href="bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css" />
+        <script src="bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script> 
+        <!--<script src="bower_components/angular-bootstrap-switch/src/directives/bsSwitch.js"></script>-->
+
+    </head>
+    <body>
+        <div class="container">
+                <div ui-view></div>
+        </div>
+    </body>
+    <script>
+        $("[name='my-checkbox']").bootstrapSwitch();
+    </script>
+</html>
