@@ -16,13 +16,13 @@
   </div>
 </nav>
 <div class="form-group" style="margin-bottom: 5vh">
-    <input type="text" class="form-control" id="search">
+    <input type="text" class="form-control" id="search" ng-model="$ctrl.query">
 </div>
 <div class="container-fluid">
-    <div class="col-md-4 col-md-offset-1 image" ng-repeat="i in [1,2,3,4,5,6,7,8,9,10]">
+    <div class="col-md-4 col-md-offset-1 image" ng-repeat="photo in $ctrl.shows.results">
         <a href="#{{i}}">
-            <img class="img-responsive img-thumbnail" ng-src="../img/fox.jpg"/>
-            <p class="col-md-12"> TV Title </p>
+            <img class="img-responsive img-thumbnail" ng-src="{{'https://image.tmdb.org/t/p/w300' + photo.backdrop_path}}"/>
+            <p class="col-md-8"> {{photo.name}} </p>
         </a>           
-    </div>     
+    </div>
 </div>

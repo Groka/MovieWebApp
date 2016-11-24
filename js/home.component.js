@@ -2,7 +2,16 @@ angular
     .module('home')
     .component('home', {
         templateUrl: 'partials/home.html',
-        controller: ['$rootScope', function($rootScope){
+        controller: ['clip', '$rootScope', '$scope', function(rest, $rootScope, $scope){
             $rootScope.title = 'Home';
+
+            this.query = '';
+
+            var self = this;
+
+            this.shows = rest.get({
+                type: 'tv',
+                query: this.query
+            })
         }]
     })

@@ -1,6 +1,7 @@
 var movieApp = angular.module('movieApp', [
     'ui.router',
     'home',
+    'rest'
 ]);
 
 movieApp
