@@ -1,7 +1,14 @@
+/*
 p {
     font-size: 2rem;
     white-space: nowrap;
 }
+
+.combo {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+*/
 
 .main-container{
     padding: 5vw 10vw 0vw 10vw;
@@ -9,11 +16,6 @@ p {
 
 input {
     margin-bottom: 5vh;
-}
-
-.combo {
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 /*

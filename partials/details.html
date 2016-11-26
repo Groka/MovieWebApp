@@ -1,36 +1,9 @@
 <a href="#" class="btn btn-default"> < Back </a>
 
-<!--
-<div class="row" style="margin-top: 5vh">
-    <ul style="list-style:none">
-        <li class="col-md-4" ng-repeat="i in [1,2,3,4,5]">
-            <img ng-src="img/fox.jpg" class="img-thumbnail img-responsive"/>
-        </li>
-    </ul>
-</div>
--->
-<!--
-<slick infinite="true" dots="true" arrows="true" data="posters" init-onload="tru5e" 
-    slidesToShow="3">
-    <div ng-repeat="poster in posters">
-        <img ng-src="{{poster.url}}"/>
-    </div>
-</slick>
--->
+<img class="img-responsive img-thumbnail" ng-src="{{image}}" style="margin-top: 5vh;" />
 
-<div class="slike">
-    <ul rn-carousel class="image" rn-carousel-transition="hexagon" rn-carousel-index="3" ng-style="'display': 'inline-block'">
-        <li ng-repeat="poster in posters">
-            <div ng-style="{'background-image': 'url({{poster.url}})'}" class="slika">
-                <img ng-src="{{poster.url}}" style="visibility: hidden;"/>
-            </div>
-        </li>
-    </ul>
-</div>
+<h1 data-fittext> {{title}} </h1>
 
-<div>
-{{title}}
-<br/>
-{{overview}}
+<div class="combo">
+    <p data-fittext> Overview: {{overview}} </p>
 </div>
-

@@ -1,3 +1,1 @@
-angular.module('detailed', [
-    'angular-carousel'
-]);
+angular.module('detailed', []);

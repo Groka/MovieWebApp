@@ -27,7 +27,7 @@
     <div class="col-md-6 col-sm-6 col-xs-6 offset-1 combo" ng-repeat="photo in photos | filter:{name: state.searchQuery.length > 2 ? state.searchQuery : ''} | limitTo:10">
         <a ui-sref="details({id: photo.id})">
             <img class="img-responsive img-thumbnail" ng-src="{{photo.url}}"/>
-            <p class="col-md-12 col-sm-12 col-xs-12 offset-1"> {{photo.name}} </p>
+            <p data-fittext> {{photo.name}} </p>
         </a>           
     </div>
 </div>

@@ -4,7 +4,7 @@ angular
         templateUrl: 'partials/details.html',
         controller: ['$rootScope', '$scope', '$http', '$stateParams', function($rootScope, $scope, $http, $stateParams){
             $rootScope.title = 'Details';
-
+            /*
             $scope.posters = [];
 
             $http.get('//api.themoviedb.org/3/movie/' + $stateParams.id + '/images', {
@@ -19,8 +19,8 @@ angular
                 })
                 for(var i = 0; i < $scope.posters.length; i++)
                     console.log($scope.posters[i].url);
-            }/*ubaciti failure*/)
-
+            }/*ubaciti failure)
+            */
             var trazim = $rootScope.state.stateName == 'Movies' ? 'movie' : 'tv';
             console.log(trazim);
 
@@ -32,6 +32,7 @@ angular
             }).then(function(response){
                 $scope.title = trazim == 'movie' ? response.data.title : response.data.name;
                 $scope.overview = response.data.overview;
+                $scope.image = 'https://image.tmdb.org/t/p/w1280' + response.data.backdrop_path;
             })
         }]
     })
