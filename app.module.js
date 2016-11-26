@@ -1,5 +1,7 @@
 var movieApp = angular.module('movieApp', [
     'ui.router',
     'home',
-    'detailed'
+    'detailed',
+    'ngAnimate',
+    'ui.bootstrap'
 ]);

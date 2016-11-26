@@ -59,10 +59,10 @@ angular
                 return $http.get('//api.themoviedb.org/3/search/' + trazim, {
                     params: {
                         api_key: 'e88342fb2374cd1411e14168730938d0',
-                        query: kveri,
-                        language: 'en-US'
+                        query: kveri
                     }
                 }).then(function(response){
+                    console.log(kveri);
                     return response.data.results.map(function(item){
                         $scope.photos.push({
                             url: item.backdrop_path == null ? 'img/image-unavailable.jpg' : 'https://image.tmdb.org/t/p/w780' + item.backdrop_path,

@@ -15,8 +15,7 @@
     </div>
   </div>
 </nav>
-<input type="text" ng-model="state.searchQuery" is-open="true"
-  placeholder="{{state.searchPlaceholder}}" uib-typeahead="movie for movie in getMovies($viewValue)" auto-close="disabled"
+<input type="text" ng-model="state.searchQuery" placeholder="{{state.searchPlaceholder}}" uib-typeahead="movie for movie in getMovies($viewValue)"
   typeahead-loading="loadingLocations" typeahead-no-results="noResults" typeahead-min-length="3" class="form-control">
 <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
 <div ng-show="noResults">
