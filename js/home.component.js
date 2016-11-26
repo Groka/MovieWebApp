@@ -13,7 +13,6 @@ angular
                 if(type == 'TV Shows'){
                     $scope.state.stateName = 'TV Shows';
                     $scope.state.searchPlaceholder = 'Search tv shows';
-                    //$scope.state.searchQuery = '';
                     $scope.photos = [];                    
                     if($scope.state.searchQuery.length < 3) getPopular('tv');
                     else $scope.getMovies($scope.state.searchQuery);
@@ -21,12 +20,12 @@ angular
                     
                     getPopular('tv');
 
+                    $rootScope.title = $rootScope.state.stateName;  
                     $rootScope.state = $scope.state;
                 }
                 else if(type == 'Movies'){
                     $scope.state.stateName = 'Movies';
                     $scope.state.searchPlaceholder = 'Search movies';
-                    //$scope.state.searchQuery = '';
                     $scope.photos = [];
                     if($scope.state.searchQuery.length < 3) getPopular('movie');
                     else $scope.getMovies($scope.state.searchQuery);
@@ -34,6 +33,7 @@ angular
                     
                     getPopular('movie');
 
+                    $rootScope.title = $rootScope.state.stateName;
                     $rootScope.state = $scope.state;
                 }
             }

@@ -15,7 +15,6 @@
     </div>
   </div>
 </nav>
- <!-- ZAJEBO SI POPULAR -->
 <input type="text" ng-model="state.searchQuery" is-open="true"
   placeholder="{{state.searchPlaceholder}}" uib-typeahead="movie for movie in getMovies($viewValue)" auto-close="disabled"
   typeahead-loading="loadingLocations" typeahead-no-results="noResults" typeahead-min-length="3" class="form-control">
