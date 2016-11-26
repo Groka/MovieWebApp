@@ -1,4 +1,2 @@
 angular
-    .module('home', [
-        'ngResource'
-    ]);
+    .module('home', []);

@@ -1,0 +1,35 @@
+p {
+    font-size: 2rem;
+    white-space: nowrap;
+}
+
+.main-container{
+    padding: 5vw 10vw 0vw 10vw;
+}
+
+input {
+    margin-bottom: 5vh;
+}
+
+.combo {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*
+.image p {
+    text-align: center;
+    font-size: 30px;
+    font-size: 1.5vw;
+}
+
+.col-centered {
+  display: inline-block;
+  /* reset the text-align 
+}
+
+.image {
+    width: 65vh;
+    margin-bottom: 2vh;
+}
+*/

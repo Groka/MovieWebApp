@@ -9,21 +9,25 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Movies</a></li>
-        <li><a href="#">TV Showes</a></li>
+        <li ng-class="{'active':state.stateName=='Movies'}" ng-click="homeChange('Movies')"><a href="#">Movies</a></li>
+        <li ng-class="{'active':state.stateName=='TV Shows'}" ng-click="homeChange('TV Shows')"><a href="#">TV Shows</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<div class="form-group" style="margin-bottom: 5vh">
-    <input type="text" class="form-control" id="search" ng-model="$ctrl.query">
+ <!-- ZAJEBO SI POPULAR -->
+<input type="text" ng-model="state.searchQuery" is-open="true"
+  placeholder="{{state.searchPlaceholder}}" uib-typeahead="movie for movie in getMovies($viewValue)" auto-close="disabled"
+  typeahead-loading="loadingLocations" typeahead-no-results="noResults" typeahead-min-length="3" class="form-control">
+<i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+<div ng-show="noResults">
+    <i class="glyphicon glyphicon-remove"></i> No Results Found
 </div>
 <div class="text-center">
-    <div class="col-md-6 image" ng-repeat="photo in $ctrl.shows.results">
-        <a href="#{{i}}">
-            <!--<img class="img-responsive img-thumbnail" ng-src="{{'https://image.tmdb.org/t/p/w300' + photo.backdrop_path}}"/>-->
-            <img class="img-thumbnail" ng-src="img/fox.jpg"/>
-            <p class="col-md-8"> {{photo.name}} </p>
+    <div class="col-md-6 col-sm-6 col-xs-6 offset-1 combo" ng-repeat="photo in photos | filter:{name: state.searchQuery.length > 2 ? state.searchQuery : ''} | limitTo:10">
+        <a ui-sref="details({id: photo.id})">
+            <img class="img-responsive img-thumbnail" ng-src="{{photo.url}}"/>
+            <p class="col-md-12 col-sm-12 col-xs-12 offset-1"> {{photo.name}} </p>
         </a>           
     </div>
 </div>

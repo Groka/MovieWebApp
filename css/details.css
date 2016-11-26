@@ -1,0 +1,18 @@
+button {
+    margin-bottom: 5vh;
+}
+
+.slike {
+    padding: 0vw 15vw 0vw 15vw;
+    position: relative;
+}
+
+.slika {
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+ul {
+    position: relative;
+}

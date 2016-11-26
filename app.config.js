@@ -5,6 +5,10 @@ movieApp
         $stateProvider
             .state('home', {
                 url: '/home',
-                template: '<home></home>'
+                template: '<home></home>',
+            })
+            .state('details', {
+                url: '/details/:id',
+                template: '<detailed></detailed>',
             })
     }])
